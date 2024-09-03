@@ -9,7 +9,11 @@ dotenv.config();
 
 // Set up CORS
 if (process.env.mode === 'production') {
-    app.use(cors());
+    app.use(cors({
+        origin: ["http://user.onebyonenews.com", "http://onebyonenews.com","http://admin.onebyonenews.com"], // Allow both origins
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        credentials: true,
+    }));
 } else {
     app.use(cors({
         origin: ["http://localhost:5173", "http://localhost:3000"], // Allow both origins
