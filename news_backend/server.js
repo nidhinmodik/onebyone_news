@@ -16,7 +16,7 @@ if (process.env.mode === 'production') {
     }));
 } else {
     app.use(cors({
-        origin: ["http://localhost:5173", "http://localhost:3000"], // Allow both origins
+        origin: ["http://localhost:5173", "http://localhost:3000","http://user.onebyonenews.com", "http://onebyonenews.com","http://admin.onebyonenews.com"], // Allow both origins
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true, // If you need to support credentials (e.g., cookies)
     }));
