@@ -10,30 +10,36 @@ dotenv.config();
 // Set up CORS
 if (process.env.mode === 'production') {
     app.use(cors({
-        origin: ["http://user.onebyonenews.com", "http://onebyonenews.com", "http://admin.onebyonenews.com"], // Allow both origins
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true,
-        allowedHeaders: [
-            Origin,
-            Content - Type,
-            Accept,
-            Authorization,
-            X - Request - With,
-        ],
+        origin: '*',
     }));
+    // app.use(cors({
+    //     origin: ["http://user.onebyonenews.com", "http://onebyonenews.com", "http://admin.onebyonenews.com"], // Allow both origins
+    //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    //     credentials: true,
+    //     allowedHeaders: [
+    //         Origin,
+    //         Content - Type,
+    //         Accept,
+    //         Authorization,
+    //         X - Request - With,
+    //     ],
+    // }));
 } else {
     app.use(cors({
-        origin: ["http://localhost:5173", "http://localhost:3000", "http://user.onebyonenews.com", "http://onebyonenews.com", "http://admin.onebyonenews.com"], // Allow both origins
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true,
-        allowedHeaders: [
-            Origin,
-            Content - Type,
-            Accept,
-            Authorization,
-            X - Request - With,
-        ],
+        origin: '*',
     }));
+    //app.use(cors({
+    //     origin: ["http://localhost:5173", "http://localhost:3000", "http://user.onebyonenews.com", "http://onebyonenews.com", "http://admin.onebyonenews.com"], // Allow both origins
+    //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    //     credentials: true,
+    //     allowedHeaders: [
+    //         Origin,
+    //         Content - Type,
+    //         Accept,
+    //         Authorization,
+    //         X - Request - With,
+    //     ],
+    // }));
 }
 
 
