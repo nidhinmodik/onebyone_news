@@ -44,5 +44,5 @@
     "tailwindcss": "^3.4.9",
     "vite": "^5.4.0"
   },
-  "proxy": "https://user.onebyonenews.com/"
+  "proxy": "https://user.onebyonenews.com"
 }
